@@ -59,8 +59,14 @@ class Student:
         self.name = name
         self.subject = subject
         Student.count += 1
-       
-       
+    # Alternative constructor created using class method
+    @classmethod
+    def from_string(cls,string):
+        name,subject = string.split(",")
+        return cls(name,subject)
+        
+    
+    # we can create a classmethod using decorator like follows, cls used to refer class as first variable.
     @classmethod
     def print_school_details(cls):
         print(f"School name: {cls.name}, E mail : {cls.mail}, Contact : {cls.contact},Number of students : {cls.count}")
@@ -76,3 +82,8 @@ student_1.print_school_details()
 student_2 = Student("Risham","science")
 
 Student.print_school_details()
+
+
+student_3 = Student.from_string("Shafeek,science")
+student_1.print_school_details()
+print(student_3.name)
