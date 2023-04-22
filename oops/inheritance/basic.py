@@ -72,13 +72,23 @@ developer1 = Developer("muhammed","basheer",50000,9847313208,"Python")
 security1 = Employee("shafeek","ahammed",20000,9832876542)
 developer2 = Developer("akhil","mohan",50000,7638492839,"Java")
 
-manager1 = Manager("Rahul","raj",60000,6537864532,[developer1])
-#manager1.list_of_employees()
-manager1.add_employee(developer2)
-manager1.add_employee(security1)
-#manager1.list_of_employees()
-manager1.remove_employee(security1)
-manager1.list_of_employees()
+# isinstance() is an inbuild python function uses to check wether an object is instance of a particular class or not
+
+print(f"developer one is an instance of developer class : {isinstance(developer1,Developer)}\n")
+print(f"developer one is an instance of Employee class : {isinstance(developer1,Employee)}\n")
+print(f"security one is an instance of developer class : {isinstance(security1,Developer)}\n")
+
+# as we checked instances, we can use issubclass() function to check wether a class is subclass of a particular class or not
+
+print(f"Developer class is the subclass of Employee class : {issubclass(Developer,Employee)}")
+
+# manager1 = Manager("Rahul","raj",60000,6537864532,[developer1])
+# manager1.list_of_employees()
+# manager1.add_employee(developer2)
+# manager1.add_employee(security1)
+# manager1.list_of_employees()
+# manager1.remove_employee(security1)
+# manager1.list_of_employees()
 # security1.apply_raise()
 # print(security1.pay)
 
