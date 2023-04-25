@@ -1,0 +1,11 @@
+{
+    "age": 25,
+    "name": "Shaheer",
+    "present": true,
+    "subjects": [
+        "sociology",
+        "journalism",
+        "computer application",
+        "communicative english"
+    ]
+}
